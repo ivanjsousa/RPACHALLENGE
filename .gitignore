@@ -1,1 +1,7 @@
+.gitignore
+
 *.csv
+*.xlsx
+
+\dados
+\venv
