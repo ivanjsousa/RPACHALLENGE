@@ -1,7 +1,7 @@
 import pyautogui as pg
 import time
 
-pg.PAUSE = 0.2
+pg.PAUSE = 0.3
 pg.FAILSAFE = True
 
 
@@ -9,7 +9,7 @@ pg.alert(text="Vamos começar os cadastros!", title="Alerta do Robô", button="O
 
 
 pg.click(pg.locateCenterOnScreen("img\\start.png", confidence=0.7))
-time.sleep(2)
+time.sleep(3)
 
 
 
@@ -29,11 +29,12 @@ def main():
 
             print("Preenchendo com: ", line)
 
+
             pg.click(pg.locateCenterOnScreen("img\\first_name.png", confidence=0.9))
             pg.write(firt_name, interval=0.1)
             time.sleep(0.3)
             
-            pg.click(pg.locateCenterOnScreen("img\\last_name.png", confidence=0.9, grayscale=True))
+            pg.click(pg.locateCenterOnScreen("img\\last_name.png", confidence=0.8, grayscale=True))
             pg.write(last_name, interval=0.1)
             
             pg.click(pg.locateCenterOnScreen("img\\name_company.png", confidence=0.8))
@@ -56,8 +57,7 @@ def main():
             pg.write(phone, interval=0.1)
             time.sleep(0.3)
             
-            pg.click(pg.locateCenterOnScreen("img\\submit.png", confidence=0.7))
-   
+            pg.click(pg.locateCenterOnScreen("img\\submit.png", confidence=0.7))   
             
 
 if __name__ == '__main__':
